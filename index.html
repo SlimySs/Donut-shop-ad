@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donut Shop Special Ad</title>
-    </head>
+    <title>Donut Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-
-<div class="container">
-    <div class="header">🍩 Donut Shop Special Deal 🍩</div>
-    <div class="subheader">Freshly Baked Donuts Delivered Hot & Tasty</div>
-    
-    <img class="promo-image" src="https://via.placeholder.com/600x400?text=Delicious+Donuts" alt="Delicious Donuts">
-    
-    <p>Indulge in our variety of delicious donuts, freshly made with love! Get 10% OFF on your first order when you use code <strong>YUMMY10</strong> at checkout!</p>
-    
-    <a href="#" class="button">Order 
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('menu')">Menu</button>
+            <button onclick="showSection('drinks')">Drinks</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </nav>
+        
+        <div class="container">
+            <div id="home" class="section active">
+                <h1>🍩 Welcome to the Donut Shop! 🍩</h1>
+                <p>Fresh, handmade donuts every day! Enjoy our delicious selection.</p>
+            </div>
+            <div id="menu" class="section">
+                <h1>Our Menu</h1>
+                <div class="menu-item">🍩 Glazed Donut - $2 <button class="order-btn" onclick="addToCart('Glazed Donut', 2)">Order</button></div>
+                <div class="menu-item">🍩 Chocolate Donut - $2.5 <button class="order-btn" onclick="addToCart('Chocolate Donut', 2.5)">Order</button></div>
+                <div class="menu-item">🍩 Sprinkled Donut - $3 <button class="order-btn" onclick="addToCart('Sprinkled Donut', 3)">Order</button></div>
+            </div>
+            <div id="drinks" class="section">
+                <h1>Drinks Menu</h1>
+                <div class="menu-item">☕ Coffee - $2 <button class="order-btn" onclick="addToCart('Coffee', 2)">Order</button></div>
+                <div class="menu-item">🍵 Green Tea - $2.5 <button class="order-btn" onclick="addToCart('Green Tea', 2.5)">Order</button></div>
+                <div class="menu-item">🥤 Iced Latte - $3 <button class="order-btn" onclick="addToCart('Iced Latte', 3)">Order</button></div>
+            </div>
+            <div id="contact" class="section">
+                <h1>Contact Us</h1>
+                <p>Email: kurdadzesoso@gmail.com</p>
+                <p>Phone: 555-021-020</p>
+            </div>
+            <div id="cart" class="section">
+                <h1>Your Cart</h1>
+                <ul id="cart-items"></ul>
+                <p id="total-price">Total: $0</p>
+            </div>
+        </div>
+        
+    <script src="script.js"></script>
 
 </body>
 </html>
